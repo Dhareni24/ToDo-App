@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <style>
+        /* General Styles */
+        body {
+            background-color: #2C3E50; /* Dark blue background */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Task Container */
+        .task-container {
+            background: white;
+            width: 350px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /* Title */
+        .task-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2980B9; /* Blue color */
+            margin-bottom: 10px;
+        }
+
+        /* Task Categories */
+        .task-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .task-item {
+            background: #D6EAF8; /* Light blue */
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 18px;
+            color: #154360;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .task-item:hover {
+            background: #AED6F1; /* Slightly darker blue */
+        }
+
+        /* Plus Button */
+        .plus-button {
+            background: #2980B9;
+            color: white;
+            font-size: 24px;
+            border: none;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .plus-button:hover {
+            background: #1A5276;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="task-container">
+        <div class="task-title">Tasks</div>
+        <p>Create your categorized task boards...</p>
+
+        <div class="task-list">
+            <div class="task-item" onclick="navigateTo('inspiration.html')">
+                Inspiration
+                <button class="plus-button" onclick="navigateTo('inspiration.html')">+</button>
+            </div>
+            <div class="task-item" onclick="navigateTo('work.html')">
+                Work
+                <button class="plus-button" onclick="navigateTo('work.html')">+</button>
+            </div>
+            <div class="task-item" onclick="navigateTo('travel.html')">
+                Travel Plans
+                <button class="plus-button" onclick="navigateTo('travel.html')">+</button>
+            </div>
+            <div class="task-item" onclick="navigateTo('groceries.html')">
+                Groceries
+                <button class="plus-button" onclick="navigateTo('groceries.html')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+
+</body>
+</html>
